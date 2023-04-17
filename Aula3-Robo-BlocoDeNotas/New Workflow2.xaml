@@ -1,0 +1,89 @@
+<Activity mc:Ignorable="sap sap2010 sads" x:Class="New_Workflow2" mva:VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="New_Workflow2_1"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
+ xmlns:o="clr-namespace:OpenRPA;assembly=OpenRPA.Interfaces"
+ xmlns:oa="clr-namespace:OpenRPA.Activities;assembly=OpenRPA"
+ xmlns:oi="clr-namespace:OpenRPA.Interfaces;assembly=OpenRPA.Interfaces"
+ xmlns:ow="clr-namespace:OpenRPA.Windows;assembly=OpenRPA.Windows"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>OpenRPA</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>OpenRPA.Interfaces</x:String>
+      <x:String>System.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>OpenRPA</AssemblyReference>
+      <AssemblyReference>OpenRPA.Interfaces</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <oa:OpenApplication Result="{x:Null}" Timeout="{x:Null}" AnimateMove="False" CheckRunning="True" DisplayName="Bloco de notas" Height="519" sap2010:WorkflowViewState.IdRef="OpenApplication_2" Screen="0" Selector="%[&#xA;  {&#xA;    &quot;filename&quot;: &quot;%ProgramFiles%\\WindowsApps\\Microsoft.WindowsNotepad_11.2302.26.0_x64__8wekyb3d8bbwe\\Notepad\\Notepad.exe&quot;,&#xA;    &quot;processname&quot;: &quot;Notepad&quot;,&#xA;    &quot;arguments&quot;: &quot; &quot;,&#xA;    &quot;Selector&quot;: &quot;Windows&quot;,&#xA;    &quot;search_descendants&quot;: &quot;True&quot;,&#xA;    &quot;mouse_over_search&quot;: &quot;False&quot;&#xA;  },&#xA;  {&#xA;    &quot;ClassName&quot;: &quot;Notepad&quot;,&#xA;    &quot;Name&quot;: &quot;Bloco de notas&quot;,&#xA;    &quot;ControlType&quot;: &quot;Window&quot;,&#xA;    &quot;FrameworkId&quot;: &quot;Win32&quot;&#xA;  }&#xA;]" Width="1025" X="156" Y="156">
+      <oa:OpenApplication.Variables>
+        <Variable x:TypeArguments="x:Int32" Default="0" Name="Index" />
+        <Variable x:TypeArguments="x:Int32" Default="0" Name="Total" />
+      </oa:OpenApplication.Variables>
+      <ActivityAction x:TypeArguments="oi:IElement">
+        <ActivityAction.Argument>
+          <DelegateInArgument x:TypeArguments="oi:IElement" Name="item" />
+        </ActivityAction.Argument>
+      </ActivityAction>
+    </oa:OpenApplication>
+    <ow:GetElement ClearCache="{x:Null}" Elements="{x:Null}" From="{x:Null}" Image="{x:Null}" Interactive="{x:Null}" LoopAction="{x:Null}" Timeout="{x:Null}" sap2010:WorkflowViewState.IdRef="GetElement_3" MaxResults="1" MinResults="1" Selector="%[&#xA;  {&#xA;    &quot;filename&quot;: &quot;%ProgramFiles%\\WindowsApps\\Microsoft.WindowsNotepad_11.2302.26.0_x64__8wekyb3d8bbwe\\Notepad\\Notepad.exe&quot;,&#xA;    &quot;processname&quot;: &quot;Notepad&quot;,&#xA;    &quot;arguments&quot;: &quot;&quot;,&#xA;    &quot;Selector&quot;: &quot;Windows&quot;,&#xA;    &quot;search_descendants&quot;: &quot;True&quot;,&#xA;    &quot;mouse_over_search&quot;: &quot;False&quot;&#xA;  },&#xA;  {&#xA;    &quot;ClassName&quot;: &quot;Notepad&quot;,&#xA;    &quot;Name&quot;: &quot;Bloco de notas&quot;,&#xA;    &quot;ControlType&quot;: &quot;Window&quot;,&#xA;    &quot;FrameworkId&quot;: &quot;Win32&quot;&#xA;  },&#xA;  {&#xA;    &quot;ClassName&quot;: &quot;Notepad&quot;,&#xA;    &quot;Name&quot;: &quot;Bloco de notas&quot;,&#xA;    &quot;ControlType&quot;: &quot;Window&quot;,&#xA;    &quot;FrameworkId&quot;: &quot;Win32&quot;&#xA;  }&#xA;]">
+      <ow:GetElement.Variables>
+        <Variable x:TypeArguments="x:Int32" Default="0" Name="Index" />
+        <Variable x:TypeArguments="x:Int32" Default="0" Name="Total" />
+      </ow:GetElement.Variables>
+      <ActivityAction x:TypeArguments="o:UIElement">
+        <ActivityAction.Argument>
+          <DelegateInArgument x:TypeArguments="o:UIElement" Name="item" />
+        </ActivityAction.Argument>
+        <Assign>
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[item.Value]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">Olá Mundo!</InArgument>
+          </Assign.Value>
+          <sap2010:WorkflowViewState.IdRef>Assign_1</sap2010:WorkflowViewState.IdRef>
+        </Assign>
+      </ActivityAction>
+    </ow:GetElement>
+    <sads:DebugSymbol.Symbol>dw1DOlxFbXB0eS54YW1sAA==</sads:DebugSymbol.Symbol>
+  </Sequence>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="OpenApplication_2" sap:VirtualizedContainerService.HintSize="256,149" />
+      <sap2010:ViewStateData Id="Assign_1" sap:VirtualizedContainerService.HintSize="242,60" />
+      <sap2010:ViewStateData Id="GetElement_3" sap:VirtualizedContainerService.HintSize="256,190" />
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="278,503">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="New_Workflow2_1" sap:VirtualizedContainerService.HintSize="318,583" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>
