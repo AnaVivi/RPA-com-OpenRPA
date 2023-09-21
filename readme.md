@@ -1,3 +1,5 @@
-# Repositório dedicado ao curso "Robotic Process Automation (RPA) com OpenRPA" (Udemy)
+##Robot exercise developed with OpenRPA
 
-Aqui serão postadas atividades/projetos feitos durante o curso.
+This robot, opens a Chrome browser and searches for João Pessoa Temperature.
+
+Reference: https://www.youtube.com/watch?v=0ZcbNPARsRM
